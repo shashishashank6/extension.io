@@ -1,0 +1,20 @@
+{
+"manifest_version": 2,
+    "name": "replacing",
+    "description": "This is your Chrome extension which replaces a word or phrase with a different word or phrase. ",
+    "version": "0.1",
+    "permissions":[
+         "https://www.nytimes.com/2017/05/19/us/politics/trump-russia-comey.html "
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.nytimes.com/2017/05/19/us/politics/trump-russia-comey.html"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
